@@ -1,13 +1,16 @@
 # docsify
-网页文档
 
-# 目录
+<font face="宋体">网页文档</font>
+
+
+# <font face="楷体">目录</font>
 
 - [目录](#目录)
 - [下单](#下单)
 - [签名加密规则](#签名加密规则)
 
-# 下单
+
+# <font face="楷体">下单</font>
 
 | 名称 | 说明 |
 | --- | --- |
@@ -20,7 +23,6 @@
 | uuid | 身份号 |
 | out_trade_no | 你的订单号 |
 | amount | 下单金额，单位元 |
-| notice_url | 支付成功后的通知地址 |
 | sign | 签名 |
 
 - 响应信息
@@ -35,12 +37,28 @@
 }
 ```
 
-# 签名加密规则
+# <font face="楷体">签名加密规则</font>
 
 1. 将要发送的数据以字典序排序，空值不参与排序
 2. 以 url 键值对格式拼接参数
 3. 拼接商户密钥
 4. 对拼接后的字符串进行 md5 加密，然后转换为大写
+
+```php
+// php 示例
+function sign($data, $key = '商户密钥')
+{
+    // 空值不参与排序
+    $data = array_filter($data);
+    // 字典排序
+    ksort($data);
+    // 以 url 键值对格式拼接参数
+    $str = urldecode(http_build_query($data));
+    // 拼接商户密钥。直接拼接 key 就好了
+    $str .= $key;
+    return strtoupper(md5($str));
+}
+```
 
 ```java
 // java 示例

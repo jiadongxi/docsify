@@ -7,17 +7,34 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
 </head>
 <body>
-  <div id="app"></div>
+<div id="app">加载中</div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
+      coverpage: true,
+      themeColor: '#00B28A',
+      // name: '创建订单',
+      name: '<div><img src="/_media/icon.svg" style="vertical-align:middle"/><span style="vertical-align:middle">创建订单</span></div>',
+      // name: '<span>创建订单</span>',
+      // logo: '/_media/icon.svg',
+      loadNavbar: true,//顶部导航栏 _navbar.md
+      loadSidebar: true,//左边侧边栏 _sidebar.md
+      subMaxLevel: 2,//左边侧边栏显示导航
+      repo: '',
+      search: {paths: 'auto',placeholder: '搜索',noData: '找不到结果',depth: 3, }, 
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//unpkg.com/docsify-copy-code"></script>
+  <!-- // <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script> -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-java.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-php.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-json.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-php.min.js"></script>
+  
 </body>
 </html>
